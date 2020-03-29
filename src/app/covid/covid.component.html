@@ -1,0 +1,122 @@
+<div class="container-fluid">
+
+    <div class="card border border-primary">
+        <div class="card-header bg-primary text-white">
+            <h3 class="text-center"><i class="font-weight-bold text-danger"><u>COVID-19</u></i> UPDATE INFORMATION</h3>
+        </div>
+        <div class="card-body">
+            <ngb-accordion [closeOthers]="true">
+                <ngb-panel id="static-1">
+                    <ng-template ngbPanelTitle>
+                        <span>&#9733; <b>Infected Countries & Search</b> &#9733;</span>
+                    </ng-template>
+                    <!-- <ng-template ngbPanelContent>
+                        <form [formGroup]="frmGroup">
+                            <div class="form-group form-inline">
+                                <p class="font-weight-bold">Search:</p> <input class="form-control ml-2" type="text"
+                                    formControlName="obj" />
+                            </div>
+                        </form>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Country</th>
+                                    <th scope="col">Cases</th>
+                                    <th scope="col">Today Cases</th>
+                                    <th scope="col">Deaths</th>
+                                    <th scope="col">Today Deaths</th>
+                                    <th scope="col">Recovered</th>
+                                    <th scope="col">Active</th>
+                                    <th scope="col">Critical</th>
+                                    <th scope="col">Cases Per One Million</th>
+                                    <th scope="col">Deaths Per One Million</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let covidObj of covidObjs | async; index as i">
+                                    <th scope="row">{{ i + 1 }}</th>
+                                    <td>
+                                        <img [src]="covidObj.countryInfo.flag" class="mr-2" style="width: 20px">
+                                        <ngb-highlight [result]="covidObj.country"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.cases | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.deaths | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.todayCases | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.todayDeaths | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.recovered | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.active | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.critical | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.casesPerOneMillion | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                    <td>
+                                        <ngb-highlight [result]="covidObj.deathsPerOneMillion | number"
+                                            [term]="frmGroup.controls['obj'].value">
+                                        </ngb-highlight>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ng-template> -->
+                </ngb-panel>
+                <!-- <ngb-panel id="static-2">
+                    <ng-template ngbPanelTitle>
+                        <span>&#9733; <b>Bar Chart</b> &#9733;</span>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div style="max-height: 800px; max-width: 800; overflow: auto">
+                            <ngx-charts-bar-horizontal [view]="view" [scheme]="colorScheme" [results]="covidBarChart"
+                                [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+                                [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                                [barPadding]="barPadding" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+                                (select)="onSelect($event)" (activate)="onActivate($event)"
+                                (deactivate)="onDeactivate($event)">
+                            </ngx-charts-bar-horizontal>
+                        </div>
+                    </ng-template>
+                </ngb-panel>  -->
+            </ngb-accordion>
+
+        </div>
+        <div class="card-fotter">
+            <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer pl-1"><cite title="Developed By">Gautam Kumar</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+</div>
