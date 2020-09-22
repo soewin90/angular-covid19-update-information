@@ -4,12 +4,14 @@ import { HttpClient } from "@angular/common/http";
 import { Covid } from "../covid/covid";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class ApiserivceService {
   constructor(private http: HttpClient) {}
 
   getCoronaInformation(): Observable<Covid[]> {
-    return this.http.get<any>("https://corona.lmao.ninja/countries");
+    return this.http.get<any>(
+      "https://corona.lmao.ninja/v3/covid-19/countries"
+    );
   }
 }
